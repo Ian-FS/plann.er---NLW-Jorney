@@ -36,7 +36,6 @@ export default function TripDetailsPage() {
   const [isConfirmationModal, setIsConfirmationModal] = useState(false);
   const [range, setRange] = useState<DateRange>();
   const [isUpdate, setIsUpdate] = useState(false);
-  const [isCreate, setIsCreate] = useState(false);
 
   const [dataTrip, setDataTrip] = useState<DataProps>({
     id: '',
@@ -114,7 +113,6 @@ export default function TripDetailsPage() {
           handleOpenCloseRegisterActivityModal={
             handleOpenCloseRegisterActivityModal
           }
-          setIsCreate={setIsCreate}
         />
       )}
       {isRegisterLinkModal && (

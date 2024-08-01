@@ -8,7 +8,6 @@ import { useParams } from 'react-router-dom';
 
 interface RegisterActivityModalProps {
   handleOpenCloseRegisterActivityModal: () => void;
-  setIsCreate: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function RegisterActivityModal({
@@ -27,9 +26,6 @@ export default function RegisterActivityModal({
     await api.post(`/trips/${tripId}/activities`, newActivity).then((res) => {
       console.log(res.status);
     });
-
-    // handleOpenCloseRegisterActivityModal();
-    // setIsCreate(true);
   }
 
   return (
